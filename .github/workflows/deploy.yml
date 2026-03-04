@@ -1,0 +1,29 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build Docker image
+      run: |
+        docker build -t ticketcool .
+
+    - name: Push Docker image to AWS ECR
+      run: |
+        $(aws ecr get-login --no-include-email --region us-east-1)
+        docker tag ticketcool:latest <aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/ticketcool:latest
+        docker push <aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/ticketcool:latest
+
+    - name: Deploy to ECS
+      run: |
+        ecs-cli configure --region us-east-1 --cluster ticketcool-cluster
+        ecs-cli compose --file docker-compose.yml up
