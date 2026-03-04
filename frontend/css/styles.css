@@ -1,1 +1,44 @@
-body {\n    font-family: Arial, sans-serif;\n    margin: 0;\n    padding: 0;\n    background-color: #f4f4f4;\n} \nheader {\n    background: #35424a;\n    color: #ffffff;\n    padding: 10px 0;\n    text-align: center;\n} \nnav ul {\n    list-style: none;\n    padding: 0;\n} \nnav ul li {\n    display: inline;\n    margin: 0 10px;\n} \nnav ul li a {\n    color: #ffffff;\n    text-decoration: none;\n} \nmain {\n    padding: 20px;\n} \nfooter {\n    text-align: center;\n    padding: 10px 0;\n    background: #35424a;\n    color: white;\n}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
