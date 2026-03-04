@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - DATABASE_URL=postgres://user:password@db:5432/ticketcool
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ticketcool
+    volumes:
+      - db_data:/var/lib/postgresql/data
+volumes:
+  db_data:
