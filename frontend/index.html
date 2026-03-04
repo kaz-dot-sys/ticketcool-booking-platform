@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketCool Flight Booking</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to TicketCool</h1>
+        <nav>
+            <ul>
+                <li><a href="#search">Search Flights</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="search">
+            <h2>Find Your Flight</h2>
+            <form id="flightSearchForm">
+                <label for="departure">Departure:</label>
+                <input type="text" id="departure" name="departure" required>
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+        <section id="booking">
+            <h2>Book Your Flight</h2>
+            <form id="bookingForm">
+                <label for="passengerName">Name:</label>
+                <input type="text" id="passengerName" name="passengerName" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Book Flight</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 TicketCool. All rights reserved.</p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
