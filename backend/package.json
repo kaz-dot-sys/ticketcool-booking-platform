@@ -1,0 +1,15 @@
+{
+  "name": "ticketcool-booking-platform",
+  "version": "1.0.0",
+  "description": "Backend services for TicketCool flight booking platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "body-parser": "^1.19.0"
+  }
+}
