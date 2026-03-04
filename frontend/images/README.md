@@ -1,0 +1,1 @@
+# Images for TicketCool Flight Booking Platform\n\nThis directory contains images used in the TicketCool flight booking platform mockup. Please ensure that all images are properly licensed and attributed.
